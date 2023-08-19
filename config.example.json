@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "login": "login",
+            "password": "password"
+        },
+        {
+            "login": "login2",
+            "password": "password2"
+        }
+    ],
+    "window":[
+        {
+            "main":true,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "main":false,
+            "x": 555,
+            "y": 555
+        }
+    ],
+    "window_height": 600,
+    "window_width": 600,
+    "main_window_height":1938,
+    "main_window_width":1048,
+    "count_window":2,
+    "pathToGame": "D:\\Game\\World of Warcraft Wrath of the Lich King\\Wow.exe"
+}

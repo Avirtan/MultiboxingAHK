@@ -6,3 +6,4 @@ For run:
 3) Change count window and position
 4) Change height and width window main and slave
 5) Set path game
+Example in main.ahk

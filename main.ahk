@@ -8,11 +8,11 @@ data := FileRead(pathConfigJson)
 jsonData := Jxon_load(&data)
 mb := Multibox(2, jsonData, true)
 mb.Run()
+; mb.CopySettingsAccounts()
 
-+Esc:: {
-    mb.Close()
-}
-#HotIf WinActive("World of Warcraft")
++Esc:: mb.Close()
+
+;  #HotIf WinActive("World of Warcraft")
 1:: mb.SendKey(1)
 2:: mb.SendKey(2)
 3:: mb.SendKey(3)
@@ -31,6 +31,12 @@ mb.Run()
 ^4:: mb.SendKey("{Ctrl down}4{Ctrl up}")
 ^5:: mb.SendKey("{Ctrl down}5{Ctrl up}")
 
+!1:: mb.SendKey("{Alt down}1{Alt up}")
+!2:: mb.SendKey("{Alt down}2{Alt up}")
+!3:: mb.SendKey("{Alt down}3{Alt up}")
+!4:: mb.SendKey("{Alt down}4{Alt up}")
+!5:: mb.SendKey("{Alt down}5{Alt up}")
+
 #1:: mb.ShowWindow(1)
 #2:: mb.ShowWindow(2)
 #3:: mb.ShowWindow(3)
@@ -40,35 +46,37 @@ mb.Run()
 ^#2:: mb.ShowNotMainWindow()
 
 
-o:: mb.SendKey("o")
+; o:: mb.SendKey("o")
 z:: mb.SendKey("z")
 x:: mb.SendKey("x")
 c:: mb.SendKey("c")
-v:: mb.SendKey("v")
+; v:: mb.SendKey("v")
 q:: mb.SendKey("q")
 e:: mb.SendKey("e")
 r:: mb.SendKey("r")
 t:: mb.SendKey("t")
 y:: mb.SendKey("y")
 f:: mb.SendKey("f")
-space:: mb.SendKey("{Space}")
++space:: mb.SendKey("{Space}")
 
-+o:: mb.SendKey("{Shift down}o{Shift up}")
+; +o:: mb.SendKey("{Shift down}o{Shift up}")
 +z:: mb.SendKey("{Shift down}z{Shift up}")
 +x:: mb.SendKey("{Shift down}x{Shift up}")
 +c:: mb.SendKey("{Shift down}c{Shift up}")
-+v:: mb.SendKey("{Shift down}v{Shift up}")
+
 +q:: mb.SendKey("{Shift down}q{Shift up}")
 +e:: mb.SendKey("{Shift down}e{Shift up}")
 +r:: mb.SendKey("{Shift down}r{Shift up}")
 +t:: mb.SendKey("{Shift down}t{Shift up}")
 +f:: mb.SendKey("{Shift down}f{Shift up}")
++y:: mb.SendKey("{Shift down}y{Shift down}")
 
-^o:: mb.SendKey("{Ctrl down}o{Ctrl up}")
+; ^o:: mb.SendKey("{Ctrl down}o{Ctrl up}")
 ^z:: mb.SendKey("{Ctrl down}z{Ctrl up}")
 ^x:: mb.SendKey("{Ctrl down}x{Ctrl up}")
 ^c:: mb.SendKey("{Ctrl down}c{Ctrl up}")
-^v:: mb.SendKey("{Ctrl down}v{Ctrl up}")
+^y:: mb.SendKey("{Ctrl down}y{Ctrl down}")
+; ^v:: mb.SendKey("{Ctrl down}v{Ctrl up}")
 ^q:: mb.SendKey("{Ctrl down}q{Ctrl up}")
 ^e:: mb.SendKey("{Ctrl down}e{Ctrl up}")
 ^r:: mb.SendKey("{Ctrl down}r{Ctrl up}")
@@ -80,10 +88,9 @@ F4:: mb.SendKey("{F4}")
 
 ^Enter:: mb.SendKey("{Enter}")
 
-+]:: {
-    mb.SetWindowPosition()
-}
++]:: mb.SetWindowPosition()
 
-+Enter:: {
-    mb.Login()
-}
+; +p:: mb.CopySettingsAccounts()
+
+
++Enter:: mb.Login()
